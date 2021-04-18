@@ -11,15 +11,16 @@ body{
     color: #ffffff;
     margin: 0;
     padding: 0;
-    background-color: #eee;
+    background: rgb(146, 146, 146);
 
 }
 
 h3, h4{
-    color: #ffffff;
+    color:  rgb(146, 146, 146);
 }
 
 .container{
+    background: rgb(146, 146, 146);
     color: #ffffff;
     width: 100%;
     padding: 1rem;

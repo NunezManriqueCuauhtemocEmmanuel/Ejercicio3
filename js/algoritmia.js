@@ -75,6 +75,12 @@ function problema2(){
 
 }
 
+funcion problema3(){
+    var p3_input = document.querySelector('#p3_input').value;
+    let alf=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    var p3_array = p3_input.split(',');
+}
+
 /*
 problema 3
 primero mi alfabeto a - z
