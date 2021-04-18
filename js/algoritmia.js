@@ -75,23 +75,24 @@ function problema2(){
 
 }
 
-funcion problema3(){
-    var p3_input = document.querySelector('#p3_input').value;
-    let alf=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-    var p3_array = p3_input.split(',');
-}
+function problema3(){
+    
+    var palabra = document.querySelector('#p3-input').value;
+    var alf= ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","R","S","T","U","V","W","X","Y","Z"];
+    
+    var limpiar = palabra.replace(/ /g, "");
+    var limpiar = limpiar.toUpperCase();
+    let mayor = { contador: 0, alfabeto: 0 }
+    var palabras = limpiar.split(",");
+    palabras.forEach( (x, i) => {
 
-/*
-problema 3
-primero mi alfabeto a - z
-identificar la coma   varible.split(',')
-eliminar los espacios   
-habia, un, patito, que, decia, miau, miau
-4 (h, a, b, i)
-2 (u, n)
-5 (p, a, t, i, o)
-variable que se encargue de iterar la palabra
-guardando los caracteres unicos
-un bucle dentro de otro bucle
-wiiiiiiiiiiiiiiii uwu/
-*/
+                  const variables = [];
+                  for(letra of x){
+                                if(!variables.includes(letra))
+                                             variables.push(letra);
+                  }
+                  mayor = variables.length > mayor.contador ? { contador: variables.length, alfabeto: i } : mayor ;
+    })
+
+    document.querySelector('#p3-output').textContent = `"${palabras[mayor.alfabeto]}" es la palabra con mas caracteres unicos, contando con ${mayor.contador} de los mismos`;
+}
